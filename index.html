@@ -4,111 +4,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CROC LE PROMPT</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<title>CROC LE PROMPT - Générateur</title>
 
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
 <body>
 
-<header>
-<div class="header-inner">
-<img src="logo.png" class="logo">
-<div>
-<h1>CROC LE PROMPT</h1>
-<p>Construisez votre prompt avec la méthode CROC</p>
+<header class="topbar">
+<div class="logo-area">
+<div class="logo-circle">🧠</div>
+<span class="brand">CROC LE PROMPT</span>
 </div>
-</div>
+
+<nav>
+<a href="#">Accueil</a>
+<a href="#">Générateur</a>
+<a href="#">Exemples</a>
+</nav>
 </header>
 
-<nav class="topnav">
-<ul>
-<li>Accueil</li>
-<li>Méthode CROC</li>
-<li>Exemples</li>
-<li>Aide</li>
-</ul>
-</nav>
 
-<main>
-
-<section class="builder">
-
-<h2>Constructeur de Prompt</h2>
-
-<div class="step">
-<label>Cadrage</label>
-<select id="cadrage">
-<option value="">Choisir un contexte</option>
-<option>Atelier pédagogique</option>
-<option>Animation numérique</option>
-<option>Formation professionnelle</option>
-<option>Création de contenu</option>
-<option>Projet éducatif</option>
-</select>
-</div>
-
-<div class="step">
-<label>Rôle de l'IA</label>
-<select id="role">
-<option value="">Choisir un rôle</option>
-<option>Expert pédagogique</option>
-<option>Animateur numérique</option>
-<option>Professeur</option>
-<option>Concepteur de jeu</option>
-<option>Rédacteur professionnel</option>
-</select>
-</div>
-
-<div class="step">
-<label>Objectif</label>
-<select id="objectif">
-<option value="">Choisir un objectif</option>
-<option>Créer un quiz</option>
-<option>Créer une activité</option>
-<option>Expliquer un concept</option>
-<option>Créer un jeu pédagogique</option>
-<option>Rédiger un texte</option>
-</select>
-</div>
-
-<div class="step">
-<label>Cible</label>
-<select id="cible">
-<option value="">Choisir une cible</option>
-<option>Enfants</option>
-<option>Collégiens</option>
-<option>Lycéens</option>
-<option>Adultes</option>
-<option>Seniors</option>
-</select>
-</div>
-
-<button onclick="genererPrompt()" class="btn-generate">
-Générer le prompt
-</button>
-
+<section class="hero">
+<h1>Créer un prompt pédagogique puissant</h1>
+<p>Construisez votre prompt étape par étape</p>
 </section>
 
-<section class="result">
 
+<main class="app">
+
+<div class="grid">
+
+<div class="card">
+<h3>Contexte</h3>
+<select id="cadrage"></select>
+</div>
+
+<div class="card">
+<h3>Rôle</h3>
+<select id="role"></select>
+</div>
+
+<div class="card">
+<h3>Objectif</h3>
+<select id="objectif"></select>
+</div>
+
+<div class="card">
+<h3>Public cible</h3>
+<select id="cible"></select>
+</div>
+
+</div>
+
+<textarea id="details" placeholder="Ajouter des précisions..."></textarea>
+
+<button onclick="genererPrompt()" class="generate">
+✨ Générer mon prompt
+</button>
+
+
+<div class="result">
 <h2>Prompt généré</h2>
 
-<pre id="resultat">
-Votre prompt apparaîtra ici
-</pre>
+<pre id="resultat">Votre prompt apparaîtra ici</pre>
 
-<button onclick="copierPrompt()" class="btn-copy">
-Copier
-</button>
+<div class="actions">
+<button onclick="copierPrompt()">Copier</button>
+<button onclick="telechargerPrompt()">Télécharger</button>
+</div>
 
-</section>
+</div>
 
 </main>
 
 <footer>
-
-CROC LE PROMPT • Générateur pédagogique
-
+CROC LE PROMPT • Générateur pédagogique IA
 </footer>
 
 <script src="script.js"></script>
