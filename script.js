@@ -1,3 +1,4 @@
+
 function genererPrompt(){
 
 let cadrage = document.getElementById("cadrage").value
@@ -11,7 +12,9 @@ Rôle : ${role}
 
 Objectif : ${objectif}
 
-Cible : ${cible}`
+Cible : ${cible}
+
+Génère une réponse adaptée.`
 
 document.getElementById("resultat").textContent = prompt
 
@@ -23,6 +26,6 @@ let texte = document.getElementById("resultat").textContent
 
 navigator.clipboard.writeText(texte)
 
-alert("Prompt copié !")
+alert("Prompt copié")
 
 }

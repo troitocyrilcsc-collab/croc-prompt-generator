@@ -1,8 +1,7 @@
-# Générateur de Prompt CROC
 
-Outil simple pour créer des prompts IA avec la méthode **CROC**.
+# CROC LE PROMPT
 
-## Méthode
+Générateur de prompt basé sur la méthode :
 
 C → Cadrage  
 R → Rôle  
@@ -11,14 +10,9 @@ C → Cible
 
 ## Utilisation
 
-1. Remplir les champs
-2. Cliquer sur "Générer"
-3. Copier le prompt
+1. Ouvrir index.html
+2. Choisir les options dans les menus déroulants
+3. Cliquer sur "Générer mon prompt"
+4. Copier le résultat
 
-## Hébergement
-
-Compatible avec **GitHub Pages**.
-
-## Licence
-
-Libre pour usage pédagogique.
+Compatible GitHub Pages.
