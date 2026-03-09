@@ -1,12 +1,12 @@
 
 const data={
 
-contexte:[
+context:[
 "Atelier pédagogique",
-"Formation",
+"Cours interactif",
+"Formation professionnelle",
 "Création de contenu éducatif",
-"Projet numérique",
-"Cours interactif"
+"Projet numérique"
 ],
 
 role:[
@@ -14,10 +14,10 @@ role:[
 "Professeur",
 "Formateur",
 "Designer pédagogique",
-"Créateur de contenus"
+"Créateur de contenu"
 ],
 
-cible:[
+target:[
 "Enfants",
 "Collégiens",
 "Lycéens",
@@ -27,64 +27,68 @@ cible:[
 
 };
 
-
-function fillSelect(id,items){
+function fillSelect(id,list){
 
 const select=document.getElementById(id);
 
 select.innerHTML='<option value="">Choisir...</option>';
 
-items.forEach(i=>{
+list.forEach(item=>{
 
-const opt=document.createElement("option");
-opt.value=i;
-opt.textContent=i;
+const option=document.createElement("option");
 
-select.appendChild(opt);
+option.value=item;
+option.textContent=item;
+
+select.appendChild(option);
 
 });
 
 }
 
-fillSelect("contexte",data.contexte);
+fillSelect("context",data.context);
 fillSelect("role",data.role);
-fillSelect("cible",data.cible);
+fillSelect("target",data.target);
 
 
 function generatePrompt(){
 
-const contexte=document.getElementById("contexte").value;
+const context=document.getElementById("context").value;
 const role=document.getElementById("role").value;
-const cible=document.getElementById("cible").value;
-const objectif=document.getElementById("objectif").value;
-const contraintes=document.getElementById("contraintes").value;
+const target=document.getElementById("target").value;
+const goal=document.getElementById("goal").value;
+const constraints=document.getElementById("constraints").value;
 
 const prompt=`
 Tu es ${role}.
 
 Contexte :
-${contexte}
+${context}
 
 Objectif :
-${objectif}
+${goal}
 
 Public cible :
-${cible}
+${target}
 
 Contraintes :
-${contraintes}
+${constraints}
 
-Structure ta réponse en étapes pédagogiques claires.
+Structure la réponse :
+- introduction
+- étapes pédagogiques
+- exemples
+- conclusion
 `;
 
-document.getElementById("result").textContent=prompt;
+document.getElementById("output").textContent=prompt;
 
 }
 
 
 function copyPrompt(){
 
-const text=document.getElementById("result").textContent;
+const text=document.getElementById("output").textContent;
 
 navigator.clipboard.writeText(text);
 
@@ -95,7 +99,7 @@ alert("Prompt copié");
 
 function downloadPrompt(){
 
-const text=document.getElementById("result").textContent;
+const text=document.getElementById("output").textContent;
 
 const blob=new Blob([text],{type:"text/plain"});
 
@@ -112,28 +116,28 @@ a.click();
 
 function savePrompt(){
 
-const text=document.getElementById("result").textContent;
+const text=document.getElementById("output").textContent;
 
 if(!text) return;
 
-let saved=JSON.parse(localStorage.getItem("prompts")||"[]");
+let saved=JSON.parse(localStorage.getItem("croc_prompts")||"[]");
 
 saved.push(text);
 
-localStorage.setItem("prompts",JSON.stringify(saved));
+localStorage.setItem("croc_prompts",JSON.stringify(saved));
 
-loadSaved();
+loadPrompts();
 
 }
 
 
-function loadSaved(){
+function loadPrompts(){
 
 const container=document.getElementById("savedPrompts");
 
 container.innerHTML="";
 
-let saved=JSON.parse(localStorage.getItem("prompts")||"[]");
+let saved=JSON.parse(localStorage.getItem("croc_prompts")||"[]");
 
 saved.forEach(p=>{
 
@@ -148,4 +152,4 @@ container.appendChild(div);
 
 }
 
-loadSaved();
+loadPrompts();

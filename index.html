@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CROC LE PROMPT X50</title>
+<title>CROC LE PROMPT - X100</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -14,32 +14,43 @@
 <body>
 
 <header class="topbar">
-<div class="logo">
-<div class="logo-icon">🧠</div>
-<span>CROC LE PROMPT X50</span>
+
+<div class="logo-area">
+<img src="logo.png" class="logo">
+<div class="brand">
+<h2>CROC LE PROMPT</h2>
+<span>Prompt Builder IA</span>
+</div>
 </div>
 
 <nav>
-<a href="#">Accueil</a>
 <a href="#builder">Générateur</a>
 <a href="#library">Bibliothèque</a>
+<a href="#about">À propos</a>
 </nav>
+
 </header>
 
 
 <section class="hero">
-<h1>Générateur de prompts pédagogiques</h1>
-<p>Construisez des prompts puissants pour l'IA</p>
+
+<h1>Construisez des prompts puissants</h1>
+<p>Plateforme pédagogique pour créer, sauvegarder et réutiliser des prompts IA</p>
+
+<a href="#builder" class="cta">Créer un prompt</a>
+
 </section>
 
 
 <section id="builder" class="container">
 
-<div class="builder-grid">
+<h2>Générateur de prompt</h2>
+
+<div class="grid">
 
 <div class="card">
 <h3>Contexte</h3>
-<select id="contexte"></select>
+<select id="context"></select>
 </div>
 
 <div class="card">
@@ -49,20 +60,22 @@
 
 <div class="card">
 <h3>Public cible</h3>
-<select id="cible"></select>
+<select id="target"></select>
 </div>
 
 <div class="card">
 <h3>Objectif (champ libre)</h3>
-<textarea id="objectif" placeholder="Décris ce que l'IA doit faire..."></textarea>
+<textarea id="goal" placeholder="Décris ce que l'IA doit faire"></textarea>
 </div>
 
 </div>
 
+<div class="card full">
 
-<div class="card">
-<h3>Contraintes supplémentaires</h3>
-<textarea id="contraintes" placeholder="Ex : durée, ton pédagogique, étapes..."></textarea>
+<h3>Contraintes pédagogiques</h3>
+
+<textarea id="constraints" placeholder="Durée, ton, structure, étapes, format..."></textarea>
+
 </div>
 
 
@@ -71,13 +84,13 @@
 </button>
 
 
-<div class="result-card">
+<div class="result">
 
-<h2>Prompt généré</h2>
+<h3>Prompt généré</h3>
 
-<pre id="result"></pre>
+<pre id="output"></pre>
 
-<div class="buttons">
+<div class="actions">
 
 <button onclick="copyPrompt()">Copier</button>
 <button onclick="downloadPrompt()">Télécharger</button>
@@ -92,16 +105,31 @@
 
 <section id="library" class="container">
 
-<h2>Bibliothèque de prompts sauvegardés</h2>
+<h2>Bibliothèque de prompts</h2>
 
-<div id="savedPrompts" class="saved-grid"></div>
+<div id="savedPrompts" class="saved"></div>
+
+</section>
+
+
+<section id="about" class="container about">
+
+<h2>À propos</h2>
+
+<p>
+CROC LE PROMPT est un outil pédagogique pour aider enseignants,
+formateurs et créateurs à construire des prompts efficaces pour l'IA.
+</p>
 
 </section>
 
 
 <footer>
-Plateforme pédagogique IA • CROC LE PROMPT
+
+<p>CROC LE PROMPT • Plateforme IA pédagogique</p>
+
 </footer>
+
 
 <script src="app.js"></script>
 
