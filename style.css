@@ -2,51 +2,84 @@
 body{
 background:#0f172a;
 color:white;
-font-family:Arial;
+font-family:Arial, sans-serif;
 margin:0;
 }
 
 header{
-text-align:center;
-padding:40px;
+background:#020617;
+padding:20px;
+border-bottom:1px solid #1e293b;
 }
 
-.logo{
-width:200px;
-margin-bottom:10px;
-}
-
-h1{
-font-size:40px;
-}
-
-main{
+.header-inner{
 display:flex;
+align-items:center;
+gap:20px;
 justify-content:center;
 }
 
-.container{
-width:700px;
+.logo{
+width:120px;
 }
 
-.bloc{
+h1{
+margin:0;
+}
+
+.topnav{
+background:#020617;
+border-bottom:1px solid #1e293b;
+}
+
+.topnav ul{
+display:flex;
+justify-content:center;
+gap:40px;
+list-style:none;
+padding:10px;
+margin:0;
+}
+
+.topnav li{
+cursor:pointer;
+color:#94a3b8;
+}
+
+main{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+.builder{
 background:#1e293b;
-padding:20px;
-margin-bottom:20px;
+padding:30px;
 border-radius:10px;
+margin-bottom:30px;
+}
+
+.step{
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-bottom:5px;
+font-weight:bold;
 }
 
 select{
 width:100%;
 padding:10px;
-margin-top:10px;
 border-radius:6px;
 border:none;
 background:#0f172a;
 color:white;
 }
 
-.generate{
+.btn-generate{
+margin-top:20px;
 width:100%;
 padding:15px;
 font-size:18px;
@@ -55,29 +88,23 @@ border:none;
 border-radius:8px;
 color:white;
 cursor:pointer;
-margin-top:10px;
-}
-
-.generate:hover{
-background:#6d28d9;
 }
 
 .result{
-margin-top:30px;
 background:#1e293b;
-padding:20px;
+padding:30px;
 border-radius:10px;
 }
 
 pre{
-background:#0f172a;
+background:#020617;
 padding:20px;
 border-radius:6px;
 white-space:pre-wrap;
 }
 
-.copy{
-margin-top:10px;
+.btn-copy{
+margin-top:15px;
 padding:10px 20px;
 background:#06b6d4;
 border:none;
@@ -88,5 +115,5 @@ cursor:pointer;
 footer{
 text-align:center;
 padding:30px;
-color:#94a3b8;
+color:#64748b;
 }

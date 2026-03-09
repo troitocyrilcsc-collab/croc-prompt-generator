@@ -14,7 +14,7 @@ Objectif : ${objectif}
 
 Cible : ${cible}
 
-Génère une réponse adaptée.`
+Réponds en suivant ces instructions.`
 
 document.getElementById("resultat").textContent = prompt
 
@@ -26,6 +26,6 @@ let texte = document.getElementById("resultat").textContent
 
 navigator.clipboard.writeText(texte)
 
-alert("Prompt copié")
+alert("Prompt copié !")
 
 }

@@ -11,52 +11,68 @@
 <body>
 
 <header>
+<div class="header-inner">
 <img src="logo.png" class="logo">
+<div>
 <h1>CROC LE PROMPT</h1>
-<p>Construisez votre prompt étape par étape</p>
+<p>Construisez votre prompt avec la méthode CROC</p>
+</div>
+</div>
 </header>
 
-<main>
-<div class="container">
+<nav class="topnav">
+<ul>
+<li>Accueil</li>
+<li>Méthode CROC</li>
+<li>Exemples</li>
+<li>Aide</li>
+</ul>
+</nav>
 
-<div class="bloc">
-<h2>1️⃣ Cadrage</h2>
+<main>
+
+<section class="builder">
+
+<h2>Constructeur de Prompt</h2>
+
+<div class="step">
+<label>Cadrage</label>
 <select id="cadrage">
 <option value="">Choisir un contexte</option>
 <option>Atelier pédagogique</option>
 <option>Animation numérique</option>
+<option>Formation professionnelle</option>
 <option>Création de contenu</option>
 <option>Projet éducatif</option>
-<option>Formation</option>
 </select>
 </div>
 
-<div class="bloc">
-<h2>2️⃣ Rôle</h2>
+<div class="step">
+<label>Rôle de l'IA</label>
 <select id="role">
 <option value="">Choisir un rôle</option>
 <option>Expert pédagogique</option>
 <option>Animateur numérique</option>
-<option>Concepteur de jeux</option>
+<option>Professeur</option>
+<option>Concepteur de jeu</option>
 <option>Rédacteur professionnel</option>
-<option>Formateur</option>
 </select>
 </div>
 
-<div class="bloc">
-<h2>3️⃣ Objectif</h2>
+<div class="step">
+<label>Objectif</label>
 <select id="objectif">
 <option value="">Choisir un objectif</option>
 <option>Créer un quiz</option>
-<option>Expliquer un concept</option>
 <option>Créer une activité</option>
-<option>Rédiger un texte</option>
+<option>Expliquer un concept</option>
 <option>Créer un jeu pédagogique</option>
+<option>Rédiger un texte</option>
 </select>
 </div>
 
-<div class="bloc">
-<h2>4️⃣ Cible</h2>
+<div class="step">
+<label>Cible</label>
 <select id="cible">
 <option value="">Choisir une cible</option>
 <option>Enfants</option>
@@ -67,21 +83,32 @@
 </select>
 </div>
 
-<button onclick="genererPrompt()" class="generate">
-Générer mon prompt
+<button onclick="genererPrompt()" class="btn-generate">
+Générer le prompt
 </button>
 
-<div class="result">
-<h2>Prompt généré</h2>
-<pre id="resultat">Votre prompt apparaîtra ici</pre>
-<button onclick="copierPrompt()" class="copy">Copier le prompt</button>
-</div>
+</section>
 
-</div>
+<section class="result">
+
+<h2>Prompt généré</h2>
+
+<pre id="resultat">
+Votre prompt apparaîtra ici
+</pre>
+
+<button onclick="copierPrompt()" class="btn-copy">
+Copier
+</button>
+
+</section>
+
 </main>
 
 <footer>
+
 CROC LE PROMPT • Générateur pédagogique
+
 </footer>
 
 <script src="script.js"></script>

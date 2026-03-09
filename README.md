@@ -1,18 +1,18 @@
 
 # CROC LE PROMPT
 
-Générateur de prompt basé sur la méthode :
+Constructeur de prompts basé sur la méthode :
 
 C → Cadrage  
 R → Rôle  
 O → Objectif  
 C → Cible  
 
-## Utilisation
+## Installation
 
-1. Ouvrir index.html
-2. Choisir les options dans les menus déroulants
-3. Cliquer sur "Générer mon prompt"
-4. Copier le résultat
+1. Décompresser le ZIP
+2. Ouvrir index.html
 
-Compatible GitHub Pages.
+## Mise en ligne
+
+Compatible avec GitHub Pages.
