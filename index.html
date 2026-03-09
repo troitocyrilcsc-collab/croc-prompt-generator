@@ -4,51 +4,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CROC LE PROMPT - Générateur</title>
+<title>CROC LE PROMPT X50</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
 <header class="topbar">
-<div class="logo-area">
-<div class="logo-circle">🧠</div>
-<span class="brand">CROC LE PROMPT</span>
+<div class="logo">
+<div class="logo-icon">🧠</div>
+<span>CROC LE PROMPT X50</span>
 </div>
 
 <nav>
 <a href="#">Accueil</a>
-<a href="#">Générateur</a>
-<a href="#">Exemples</a>
+<a href="#builder">Générateur</a>
+<a href="#library">Bibliothèque</a>
 </nav>
 </header>
 
 
 <section class="hero">
-<h1>Créer un prompt pédagogique puissant</h1>
-<p>Construisez votre prompt étape par étape</p>
+<h1>Générateur de prompts pédagogiques</h1>
+<p>Construisez des prompts puissants pour l'IA</p>
 </section>
 
 
-<main class="app">
+<section id="builder" class="container">
 
-<div class="grid">
+<div class="builder-grid">
 
 <div class="card">
 <h3>Contexte</h3>
-<select id="cadrage"></select>
+<select id="contexte"></select>
 </div>
 
 <div class="card">
-<h3>Rôle</h3>
+<h3>Rôle de l'IA</h3>
 <select id="role"></select>
-</div>
-
-<div class="card">
-<h3>Objectif</h3>
-<select id="objectif"></select>
 </div>
 
 <div class="card">
@@ -56,34 +52,58 @@
 <select id="cible"></select>
 </div>
 
+<div class="card">
+<h3>Objectif (champ libre)</h3>
+<textarea id="objectif" placeholder="Décris ce que l'IA doit faire..."></textarea>
 </div>
 
-<textarea id="details" placeholder="Ajouter des précisions..."></textarea>
+</div>
 
-<button onclick="genererPrompt()" class="generate">
-✨ Générer mon prompt
+
+<div class="card">
+<h3>Contraintes supplémentaires</h3>
+<textarea id="contraintes" placeholder="Ex : durée, ton pédagogique, étapes..."></textarea>
+</div>
+
+
+<button class="generate" onclick="generatePrompt()">
+✨ Générer le prompt
 </button>
 
 
-<div class="result">
+<div class="result-card">
+
 <h2>Prompt généré</h2>
 
-<pre id="resultat">Votre prompt apparaîtra ici</pre>
+<pre id="result"></pre>
 
-<div class="actions">
-<button onclick="copierPrompt()">Copier</button>
-<button onclick="telechargerPrompt()">Télécharger</button>
+<div class="buttons">
+
+<button onclick="copyPrompt()">Copier</button>
+<button onclick="downloadPrompt()">Télécharger</button>
+<button onclick="savePrompt()">Sauvegarder</button>
+
 </div>
 
 </div>
 
-</main>
+</section>
+
+
+<section id="library" class="container">
+
+<h2>Bibliothèque de prompts sauvegardés</h2>
+
+<div id="savedPrompts" class="saved-grid"></div>
+
+</section>
+
 
 <footer>
-CROC LE PROMPT • Générateur pédagogique IA
+Plateforme pédagogique IA • CROC LE PROMPT
 </footer>
 
-<script src="script.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
