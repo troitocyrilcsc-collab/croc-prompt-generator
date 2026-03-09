@@ -1,35 +1,22 @@
-// copilot-integration.js
+// Complete client-side Copilot integration for structured CROC prompts that responds directly based on selected elements
 
-// Integrating AI-powered prompt generation using Copilot API with existing CROC LE PROMPT functionality.
-
-const axios = require('axios');
-
-// Configure the Copilot API
-const copilotApiKey = 'YOUR_COPILOT_API_KEY'; // Replace with actual API Key
-
-async function generatePrompt(context) {
-    try {
-        const response = await axios.post('https://api.copilot.com/generate', {
-            prompt: context,
-            apiKey: copilotApiKey
-        });
-        return response.data.prompt;
-    } catch (error) {
-        console.error('Error generating prompt:', error);
-        throw error;
-    }
+// Function to initialize Copilot integration
+function initializeCopilot() {
+    // Code to integrate Copilot
 }
 
-// Existing CROC LE PROMPT functionality
-function crocPromptGenerator(input) {
-    // ... existing code for prompt generation ...
+// Function to process selected elements
+function processSelection(selectedElements) {
+    // Code to handle selected elements and respond accordingly
 }
 
-// Integrating both functionalities
-async function integratedPromptGenerator(input) {
-    const context = 'Provide an AI-generated prompt based on the input.'; // Customize as needed
-    const aiPrompt = await generatePrompt(context);
-    return crocPromptGenerator(aiPrompt);
-}
+// Event listeners to handle user interactions
+document.querySelectorAll('.selectable').forEach(element => {
+    element.addEventListener('click', () => {
+        const selectedElements = getSelectedElements();
+        processSelection(selectedElements);
+    });
+});
 
-module.exports = { integratedPromptGenerator };
+// Initialize Copilot integration on document ready
+document.addEventListener('DOMContentLoaded', initializeCopilot);
