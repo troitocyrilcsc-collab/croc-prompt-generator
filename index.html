@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CROC - Générateur de Prompt</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🧠 Générateur de Prompt CROC</h1>
+<p>Méthode simple pour créer un prompt efficace</p>
+</header>
+
+<main>
+
+<div class="card">
+
+<label>Cadrage</label>
+<textarea id="cadrage" placeholder="Ex : atelier numérique dans un centre social"></textarea>
+
+<label>Rôle</label>
+<textarea id="role" placeholder="Ex : expert en pédagogie ludique"></textarea>
+
+<label>Objectif</label>
+<textarea id="objectif" placeholder="Ex : créer un quiz sur la sécurité internet"></textarea>
+
+<label>Cible</label>
+<textarea id="cible" placeholder="Ex : enfants de 10 à 12 ans"></textarea>
+
+<button onclick="genererPrompt()">Générer le prompt</button>
+
+</div>
+
+<div class="result">
+
+<h2>Prompt généré</h2>
+
+<pre id="resultat">
+Votre prompt apparaîtra ici
+</pre>
+
+<button onclick="copierPrompt()">Copier le prompt</button>
+
+</div>
+
+</main>
+
+<footer>
+<p>Méthode CROC - Générateur de prompt IA</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
