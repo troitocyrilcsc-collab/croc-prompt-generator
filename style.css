@@ -177,3 +177,18 @@ font-size:34px;
 }
 
 }
+
+
+
+/* ===== Header logo improvements ===== */
+.brand-link{display:inline-flex;align-items:center;line-height:0}
+.logo{height:56px;width:auto;aspect-ratio:1/1;border-radius:10px}
+@media(max-width:800px){.logo{height:48px}}
+
+/* ===== Partners section ===== */
+.partners{padding-top:10px}
+.partners-logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;align-items:center;}
+.partners-logos img{max-width:100%;height:auto;object-fit:contain;background:transparent;padding:8px;border-radius:8px}
+
+/* ===== Footer spacing after partners ===== */
+footer{margin-top:10px}
