@@ -74,11 +74,6 @@ ${target}
 Contraintes :
 ${constraints}
 
-Structure la réponse :
-- introduction
-- étapes pédagogiques
-- exemples
-- conclusion
 `;
 
 document.getElementById("output").textContent=prompt;
