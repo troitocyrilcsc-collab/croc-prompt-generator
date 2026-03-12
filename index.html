@@ -4,89 +4,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CROC LE PROMPT V4</title>
+<title>CROC LE PROMPT - X100</title>
+
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header class="navbar">
-<div class="nav-container">
+<header class="topbar">
+
+<div class="logo-area">
+<img src="logo.png" class="logo">
 <div class="brand">
-<img src="logo_croc.png" class="logo">
-<h1>CROC LE PROMPT</h1>
+<h2>CROC LE PROMPT</h2>
+<span>Prompt Builder IA</span>
+</div>
 </div>
 
 <nav>
-<ul>
-<li>Accueil</li>
-<li>Méthode CROC</li>
-<li>Générateur</li>
-</ul>
+<a href="#builder">Générateur</a>
+<a href="#library">Bibliothèque</a>
+<a href="#about">À propos</a>
 </nav>
-</div>
+
 </header>
 
+
 <section class="hero">
-<h2>Générateur professionnel de prompts IA</h2>
-<p>Créez des prompts structurés et efficaces avec la méthode CROC.</p>
-</section>
 
-<section class="generator">
+<h1>Construisez des prompts puissants</h1>
+<p>Plateforme pédagogique pour créer, sauvegarder et réutiliser des prompts IA</p>
 
-<h3>Constructeur de prompt</h3>
-
-<label>Cadrage</label>
-<select id="cadrage">
-<option>atelier pédagogique en centre social</option>
-<option>formation numérique</option>
-<option>création de contenu web</option>
-</select>
-
-<label>Rôle</label>
-<select id="role">
-<option>expert pédagogique</option>
-<option>formateur numérique</option>
-<option>rédacteur professionnel</option>
-</select>
-
-<label>Objectif</label>
-<select id="objectif">
-<option>créer une activité pédagogique</option>
-<option>expliquer un concept</option>
-<option>générer un quiz</option>
-</select>
-
-<label>Cible</label>
-<select id="cible">
-<option>enfants</option>
-<option>collégiens</option>
-<option>adultes</option>
-</select>
-
-<label>Détails supplémentaires</label>
-<textarea id="details"></textarea>
-
-<button onclick="generate()">Générer le prompt</button>
-
-<pre id="result"></pre>
-
-<button onclick="copy()">Copier le prompt</button>
+<a href="#builder" class="cta">Créer un prompt</a>
 
 </section>
+
+
+<section id="builder" class="container">
+
+<h2>Générateur de prompt</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Contexte</h3>
+<select id="context"></select>
+</div>
+
+<div class="card">
+<h3>Rôle de l'IA</h3>
+<select id="role"></select>
+</div>
+
+<div class="card">
+<h3>Public cible</h3>
+<select id="target"></select>
+</div>
+
+<div class="card">
+<h3>Objectif (champ libre)</h3>
+<textarea id="goal" placeholder="Décris ce que l'IA doit faire"></textarea>
+</div>
+
+</div>
+
+<div class="card full">
+
+<h3>Contraintes pédagogiques</h3>
+
+<textarea id="constraints" placeholder="Durée, ton, structure, étapes, format..."></textarea>
+
+</div>
+
+
+<button class="generate" onclick="generatePrompt()">
+✨ Générer le prompt
+</button>
+
+
+<div class="result">
+
+<h3>Prompt généré</h3>
+
+<pre id="output"></pre>
+
+<div class="actions">
+
+<button onclick="copyPrompt()">Copier</button>
+<button onclick="downloadPrompt()">Télécharger</button>
+<button onclick="savePrompt()">Sauvegarder</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="library" class="container">
+
+<h2>Bibliothèque de prompts</h2>
+
+<div id="savedPrompts" class="saved"></div>
+
+</section>
+
+
+<section id="about" class="container about">
+
+<h2>À propos</h2>
+
+<p>
+CROC LE PROMPT est un outil pédagogique pour aider enseignants,
+formateurs et créateurs à construire des prompts efficaces pour l'IA.
+</p>
+
+</section>
+
 
 <footer>
 
-<div class="footer-logos">
-<img src="logo_europe.png">
-<img src="logo_csat.png">
-<img src="logo_acsrv.png">
-</div>
-
-<p>Projet soutenu par les partenaires institutionnels.</p>
+<p>CROC LE PROMPT • Plateforme IA pédagogique</p>
 
 </footer>
 
-<script src="script.js"></script>
+
+<script src="app.js"></script>
 
 </body>
 </html>
