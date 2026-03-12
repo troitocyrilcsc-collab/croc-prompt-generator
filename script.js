@@ -1,116 +1,34 @@
 
-const data = {
+function generate(){
 
-cadrage:[
-"Atelier pédagogique",
-"Animation numérique",
-"Projet éducatif",
-"Formation",
-"Création de contenu"
-],
+let c=document.getElementById("cadrage").value
+let r=document.getElementById("role").value
+let o=document.getElementById("objectif").value
+let ci=document.getElementById("cible").value
+let d=document.getElementById("details").value
 
-role:[
-"Expert pédagogique",
-"Formateur",
-"Animateur numérique",
-"Designer pédagogique",
-"Rédacteur professionnel"
-],
+let prompt=`Tu es un ${r}.
 
-objectif:[
-"Créer une activité",
-"Créer un quiz",
-"Expliquer un concept",
-"Créer un jeu pédagogique",
-"Rédiger un texte"
-],
+Contexte :
+${c}.
 
-cible:[
-"Enfants",
-"Collégiens",
-"Lycéens",
-"Adultes",
-"Seniors"
-]
+Objectif :
+${o}.
 
-};
-
-
-function remplirSelect(id,options){
-
-const select=document.getElementById(id);
-
-select.innerHTML='<option value="">Choisir...</option>';
-
-options.forEach(o=>{
-
-let opt=document.createElement("option");
-opt.value=o;
-opt.textContent=o;
-
-select.appendChild(opt);
-
-});
-
-}
-
-
-Object.keys(data).forEach(k=>{
-
-remplirSelect(k,data[k]);
-
-});
-
-
-function genererPrompt(){
-
-const c=document.getElementById("cadrage").value;
-const r=document.getElementById("role").value;
-const o=document.getElementById("objectif").value;
-const t=document.getElementById("cible").value;
-const d=document.getElementById("details").value;
-
-const prompt=`
-Tu es ${r}.
-
-Contexte : ${c}.
-
-Ta mission est de ${o} pour ${t}.
+Public cible :
+${ci}.
 
 Contraintes :
 ${d}
 
-Fournis une réponse structurée, claire et pédagogique.
-`;
+Donne une réponse structurée, claire et professionnelle.`
 
-document.getElementById("resultat").textContent=prompt;
-
-}
-
-
-function copierPrompt(){
-
-const text=document.getElementById("resultat").textContent;
-
-navigator.clipboard.writeText(text);
-
-alert("Prompt copié");
+document.getElementById("result").textContent=prompt
 
 }
 
-
-function telechargerPrompt(){
-
-const text=document.getElementById("resultat").textContent;
-
-const blob=new Blob([text],{type:"text/plain"});
-
-const a=document.createElement("a");
-
-a.href=URL.createObjectURL(blob);
-
-a.download="prompt.txt";
-
-a.click();
-
+function copy(){
+let t=document.getElementById("result").textContent
+navigator.clipboard.writeText(t)
+alert("Prompt copié !")
 }
