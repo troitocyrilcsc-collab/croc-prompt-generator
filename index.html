@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Croc Le Prompt</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Croc Le Prompt</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <img src="logo.png" alt="Croc Le Prompt" class="logo">
+<header>
+  <img src="logo.png" class="logo">
+  <h1>Croc Le Prompt</h1>
+</header>
 
-  <div class="container">
-    <h1>Générateur de Prompt</h1>
+<main class="card">
+  <h2>Générateur intelligent</h2>
 
-    <input type="text" id="role" placeholder="Rôle">
-    <input type="text" id="objectif" placeholder="Objectif">
-    <input type="text" id="contexte" placeholder="Contexte">
-    <input type="text" id="contraintes" placeholder="Contraintes">
-    <input type="text" id="ton" placeholder="Ton">
-
-    <button onclick="generer()">Générer</button>
-
-    <textarea id="resultat" placeholder="Votre prompt apparaîtra ici..."></textarea>
+  <div class="grid">
+    <input id="role" placeholder="Rôle">
+    <input id="objectif" placeholder="Objectif">
+    <input id="contexte" placeholder="Contexte">
+    <input id="contraintes" placeholder="Contraintes">
+    <input id="ton" placeholder="Ton">
   </div>
 
-  <footer class="partenaires">
-    <h3>Nos partenaires</h3>
-    <div class="logos-partenaires">
-      <!-- Logos à venir -->
-    </div>
-  </footer>
+  <button onclick="generer()">Générer le prompt</button>
+
+  <textarea id="resultat" placeholder="Ton prompt apparaîtra ici..."></textarea>
+</main>
+
+<footer>
+  <h3>Partenaires</h3>
+  <div class="logos"></div>
+</footer>
 
 <script src="script.js"></script>
 </body>
