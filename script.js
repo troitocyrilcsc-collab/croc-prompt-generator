@@ -1,34 +1,31 @@
+function generer() {
+  const data = {
+    role: document.getElementById('role').value,
+    objectif: document.getElementById('objectif').value,
+    contexte: document.getElementById('contexte').value,
+    contraintes: document.getElementById('contraintes').value,
+    ton: document.getElementById('ton').value
+  };
 
-function generate(){
+  let prompt = `Tu es ${data.role}.`;
 
-let c=document.getElementById("cadrage").value
-let r=document.getElementById("role").value
-let o=document.getElementById("objectif").value
-let ci=document.getElementById("cible").value
-let d=document.getElementById("details").value
+  if (data.objectif) {
+    prompt += ` Ta mission est de ${data.objectif}.`;
+  }
 
-let prompt=`Tu es un ${r}.
+  if (data.contexte) {
+    prompt += ` Le contexte est le suivant : ${data.contexte}.`;
+  }
 
-Contexte :
-${c}.
+  if (data.contraintes) {
+    prompt += ` Tu dois respecter les contraintes suivantes : ${data.contraintes}.`;
+  }
 
-Objectif :
-${o}.
+  if (data.ton) {
+    prompt += ` Adopte un ton ${data.ton}.`;
+  }
 
-Public cible :
-${ci}.
+  prompt += ` Fournis une réponse claire, structurée et directement exploitable.`;
 
-Contraintes :
-${d}
-
-Donne une réponse structurée, claire et professionnelle.`
-
-document.getElementById("result").textContent=prompt
-
-}
-
-function copy(){
-let t=document.getElementById("result").textContent
-navigator.clipboard.writeText(t)
-alert("Prompt copié !")
+  document.getElementById('resultat').value = prompt;
 }
