@@ -17,38 +17,43 @@
 
 <main class="card">
 
+  <!-- CIBLE -->
+  <div class="section">
+    <h3>Cible</h3>
+    <input id="cible" placeholder="Ex: adolescents, seniors, parents...">
+  </div>
+
+  <!-- OBJECTIF -->
+  <div class="section">
+    <h3>Objectif</h3>
+    <input id="objectif" placeholder="Ex: organiser une activité, créer un atelier...">
+  </div>
+
+  <!-- ROLE -->
   <div class="section">
     <h3>Rôle</h3>
     <div class="choices" id="role">
-      <button onclick="select(this,'role')">Marketeur</button>
-      <button onclick="select(this,'role')">Développeur</button>
-      <button onclick="select(this,'role')">Designer</button>
-      <button onclick="select(this,'role')">Coach</button>
+      <button onclick="select(this,'role')">Animateur socioculturel</button>
+      <button onclick="select(this,'role')">Coordinateur jeunesse</button>
+      <button onclick="select(this,'role')">Médiateur numérique</button>
+      <button onclick="select(this,'role')">Travailleur social</button>
+      <button onclick="select(this,'role')">Responsable centre social</button>
+      <button onclick="select(this,'role')">Animateur senior</button>
+      <button onclick="select(this,'role')">Chargé de projet social</button>
     </div>
   </div>
 
+  <!-- CADRAGE -->
   <div class="section">
-    <h3>Objectif</h3>
-    <input id="objectif" placeholder="Ex: vendre un produit...">
-  </div>
-
-  <div class="section">
-    <h3>Contexte</h3>
+    <h3>Cadrage</h3>
     <input id="contexte" placeholder="Contexte...">
-  </div>
-
-  <div class="section">
-    <h3>Contraintes</h3>
     <input id="contraintes" placeholder="Contraintes...">
-  </div>
-
-  <div class="section">
-    <h3>Ton</h3>
+    
     <div class="choices" id="ton">
       <button onclick="select(this,'ton')">Professionnel</button>
-      <button onclick="select(this,'ton')">Amical</button>
-      <button onclick="select(this,'ton')">Persuasif</button>
-      <button onclick="select(this,'ton')">Fun</button>
+      <button onclick="select(this,'ton')">Pédagogique</button>
+      <button onclick="select(this,'ton')">Bienveillant</button>
+      <button onclick="select(this,'ton')">Dynamique</button>
     </div>
   </div>
 
