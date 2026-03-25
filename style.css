@@ -37,7 +37,7 @@ cursor:pointer;
 }
 
 .choices button.active{
-background:linear-gradient(90deg,#f59e0b,#ef4444);
+background:linear-gradient(150deg,#f59e0b,#ef4444);
 }
 
 input,textarea{
