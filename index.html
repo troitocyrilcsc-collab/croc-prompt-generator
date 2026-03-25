@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Croc Le Prompt</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,91 +11,66 @@
 
 <header>
   <img src="croc-2.png" class="logo">
-  <p class="subtitle">Générateur intelligent de prompts</p>
+  <h1>Croc Le Prompt</h1>
+  <p class="subtitle">Générateur intelligent pour centres sociaux</p>
 </header>
 
 <main class="card">
 
   <!-- CIBLE -->
   <div class="section">
-    <h3>Cible</h3>
-    <input id="cible" placeholder="Ex: adolescents, seniors, parents...">
+    <h3>🎯 Public cible</h3>
+    <input id="cible" placeholder="Ex : adolescents, seniors, familles...">
   </div>
 
   <!-- OBJECTIF -->
   <div class="section">
-    <h3>Objectif</h3>
-    <input id="objectif" placeholder="Ex: organiser une activité, créer un atelier...">
+    <h3>🎯 Objectif</h3>
+    <input id="objectif" placeholder="Ex : organiser un atelier, créer une animation...">
   </div>
 
   <!-- ROLE -->
-<div class="section">
-  <h3>Rôle</h3>
+  <div class="section">
+    <h3>👤 Votre rôle</h3>
 
-  <select id="role">
-    <option value="">-- Sélectionner un rôle --</option>
+    <select id="role">
+      <option value="">-- Sélectionner un rôle --</option>
 
-    <optgroup label="Encadrement et Direction">
-      <option>Directeur Général</option>
-      <option>Directeur Général Adjoint</option>
-      <option>Directeur de Pôle</option>
-      <option>Directeur d’Équipement</option>
-      <option>Directeur Adjoint d’Équipement</option>
-      <option>Directeur Administratif et Financier</option>
-      <option>Coordinateur Pédagogique</option>
-      <option>Coordinateur Technique</option>
-      <option>Responsable EAJE</option>
-      <option>Coordinateur Centres Sociaux Connectés</option>
-      <option>Animateur de Pôle</option>
-    </optgroup>
+      <optgroup label="Encadrement et Direction">
+        <option>Directeur Général</option>
+        <option>Directeur Général Adjoint</option>
+        <option>Directeur de Pôle</option>
+        <option>Directeur d’Équipement</option>
+        <option>Coordinateur Centres Sociaux Connectés</option>
+      </optgroup>
 
-    <optgroup label="Administratif, Gestion & Support">
-      <option>Secrétaire Accueil</option>
-      <option>Assistant RH</option>
-      <option>Assistant de Gestion</option>
-      <option>Assistant Administratif</option>
-      <option>Comptable</option>
-      <option>Gestionnaire Paie</option>
-      <option>Agent d’Entretien</option>
-    </optgroup>
+      <optgroup label="Administratif & Support">
+        <option>Secrétaire Accueil</option>
+        <option>Assistant administratif</option>
+        <option>Comptable</option>
+      </optgroup>
 
-    <optgroup label="Secteur social & animation">
-      <option>Responsable secteur adulte et famille</option>
-      <option>Responsable secteur jeunesse</option>
-      <option>Responsable secteur enfance</option>
-      <option>Animateur</option>
-      <option>Animateur ACM</option>
-      <option>Animateur loisirs</option>
-      <option>Médiateur familial</option>
-      <option>Chargé d’insertion</option>
-      <option>Formateur</option>
-      <option>Médiateur</option>
-    </optgroup>
+      <optgroup label="Social & Animation">
+        <option>Animateur</option>
+        <option>Animateur ACM</option>
+        <option>Médiateur</option>
+        <option>Chargé d’insertion</option>
+      </optgroup>
 
-    <optgroup label="Petite enfance">
-      <option>Auxiliaire de puériculture</option>
-      <option>Éducateur de jeunes enfants</option>
-    </optgroup>
+      <optgroup label="Numérique">
+        <option>Médiateur numérique</option>
+        <option>Chargé de transition numérique</option>
+      </optgroup>
 
-    <optgroup label="Communication">
-      <option>Responsable communication</option>
-      <option>Chargé de communication</option>
-    </optgroup>
-
-    <optgroup label="Numérique & Informatique">
-      <option>Technicien informatique</option>
-      <option>Chargé de transition en Territoir</option>
-    </optgroup>
-
-  </select>
-</div>
+    </select>
+  </div>
 
   <!-- CADRAGE -->
   <div class="section">
-    <h3>Cadrage</h3>
+    <h3>⚙️ Cadrage</h3>
     <input id="contexte" placeholder="Contexte...">
     <input id="contraintes" placeholder="Contraintes...">
-    
+
     <div class="choices" id="ton">
       <button onclick="select(this,'ton')">Professionnel</button>
       <button onclick="select(this,'ton')">Pédagogique</button>
@@ -103,9 +79,9 @@
     </div>
   </div>
 
-  <button class="generate" onclick="generer()">Générer le prompt</button>
+  <button class="generate" onclick="generer()">✨ Générer le prompt</button>
 
-  <textarea id="resultat"></textarea>
+  <textarea id="resultat" placeholder="Ton prompt apparaîtra ici..."></textarea>
 
   <button class="copy" onclick="copier()">📋 Copier le prompt</button>
 
@@ -114,10 +90,8 @@
 <footer>
   <h3>Partenaires</h3>
   <div class="logos">
-    <img src="Logo CSAT WS App.png">
-    <img src="Bandeau financeur sans CSAT sans caf.png">
-    <img src="logo_acsrv_carre.png">
-     <img src="AMQR_logo-vignette.png">
+    <img src="ue.png">
+    <img src="acsrv.png">
   </div>
 </footer>
 
