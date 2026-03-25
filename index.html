@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Croc V4</title>
+<title>Croc Le Prompt</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,51 +12,88 @@
 <header>
   <img src="croc-2.png" class="logo">
   <h1>Croc Le Prompt</h1>
-  <p class="subtitle">Assistant intelligent centres sociaux</p>
+  <p class="subtitle">Générateur intelligent pour centres sociaux</p>
 </header>
 
 <main class="card">
 
+  <!-- CIBLE -->
   <div class="section">
     <h3>🎯 Public cible</h3>
-    <input id="cible">
+    <input id="cible" placeholder="Ex : adolescents, seniors, familles...">
   </div>
 
+  <!-- OBJECTIF -->
   <div class="section">
     <h3>🎯 Objectif</h3>
-    <input id="objectif">
+    <input id="objectif" placeholder="Ex : organiser un atelier, créer une animation...">
   </div>
 
+  <!-- ROLE -->
   <div class="section">
-    <h3>👤 Rôle</h3>
-    <select id="role" onchange="suggestions()">
-      <option value="">-- Choisir --</option>
-      <option>Animateur</option>
-      <option>Coordinateur</option>
-      <option>Directeur</option>
-      <option>Médiateur numérique</option>
+    <h3>👤 Votre rôle</h3>
+
+    <select id="role">
+      <option value="">-- Sélectionner un rôle --</option>
+
+      <optgroup label="Encadrement et Direction">
+        <option>Directeur Général</option>
+        <option>Directeur Général Adjoint</option>
+        <option>Directeur de Pôle</option>
+        <option>Directeur d’Équipement</option>
+        <option>Coordinateur Centres Sociaux Connectés</option>
+      </optgroup>
+
+      <optgroup label="Administratif & Support">
+        <option>Secrétaire Accueil</option>
+        <option>Assistant administratif</option>
+        <option>Comptable</option>
+      </optgroup>
+
+      <optgroup label="Social & Animation">
+        <option>Animateur</option>
+        <option>Animateur ACM</option>
+        <option>Médiateur</option>
+        <option>Chargé d’insertion</option>
+      </optgroup>
+
+      <optgroup label="Numérique">
+        <option>Médiateur numérique</option>
+        <option>Chargé de transition numérique</option>
+      </optgroup>
+
     </select>
   </div>
 
-  <div id="suggestionsBox" class="suggestions"></div>
-
+  <!-- CADRAGE -->
   <div class="section">
     <h3>⚙️ Cadrage</h3>
-    <input id="contexte" placeholder="Contexte">
-    <input id="contraintes" placeholder="Contraintes">
+    <input id="contexte" placeholder="Contexte...">
+    <input id="contraintes" placeholder="Contraintes...">
+
+    <div class="choices" id="ton">
+      <button onclick="select(this,'ton')">Professionnel</button>
+      <button onclick="select(this,'ton')">Pédagogique</button>
+      <button onclick="select(this,'ton')">Bienveillant</button>
+      <button onclick="select(this,'ton')">Dynamique</button>
+    </div>
   </div>
 
-  <button class="generate" onclick="generer()">✨ Générer</button>
-  <button class="reset" onclick="reset()">♻️ Reset</button>
+  <button class="generate" onclick="generer()">✨ Générer le prompt</button>
 
-  <textarea id="resultat"></textarea>
+  <textarea id="resultat" placeholder="Ton prompt apparaîtra ici..."></textarea>
 
-  <button class="copy" onclick="copier()">📋 Copier</button>
-
-  <h3>📜 Historique</h3>
-  <div id="historique"></div>
+  <button class="copy" onclick="copier()">📋 Copier le prompt</button>
 
 </main>
+
+<footer>
+  <h3>Partenaires</h3>
+  <div class="logos">
+    <img src="ue.png">
+    <img src="acsrv.png">
+  </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
