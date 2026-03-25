@@ -71,6 +71,15 @@ background:#334155;
 cursor:pointer;
 }
 
+select{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  background:#020617;
+  color:white;
+  border:none;
+}
+
 footer{
 margin-top:60px;
 padding:30px;
