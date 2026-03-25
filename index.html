@@ -2,35 +2,70 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Croc Le Prompt</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <img src="croc-2.png" class="logo">
   <h1>Croc Le Prompt</h1>
+  <p class="subtitle">Générateur intelligent de prompts</p>
 </header>
 
 <main class="card">
-  <h2>Générateur intelligent</h2>
 
-  <div class="grid">
-    <input id="role" placeholder="Rôle">
-    <input id="objectif" placeholder="Objectif">
-    <input id="contexte" placeholder="Contexte">
-    <input id="contraintes" placeholder="Contraintes">
-    <input id="ton" placeholder="Ton">
+  <div class="section">
+    <h3>Rôle</h3>
+    <div class="choices" id="role">
+      <button onclick="select(this,'role')">Marketeur</button>
+      <button onclick="select(this,'role')">Développeur</button>
+      <button onclick="select(this,'role')">Designer</button>
+      <button onclick="select(this,'role')">Coach</button>
+    </div>
   </div>
 
-  <button onclick="generer()">Générer le prompt</button>
+  <div class="section">
+    <h3>Objectif</h3>
+    <input id="objectif" placeholder="Ex: vendre un produit...">
+  </div>
 
-  <textarea id="resultat" placeholder="Ton prompt apparaîtra ici..."></textarea>
+  <div class="section">
+    <h3>Contexte</h3>
+    <input id="contexte" placeholder="Contexte...">
+  </div>
+
+  <div class="section">
+    <h3>Contraintes</h3>
+    <input id="contraintes" placeholder="Contraintes...">
+  </div>
+
+  <div class="section">
+    <h3>Ton</h3>
+    <div class="choices" id="ton">
+      <button onclick="select(this,'ton')">Professionnel</button>
+      <button onclick="select(this,'ton')">Amical</button>
+      <button onclick="select(this,'ton')">Persuasif</button>
+      <button onclick="select(this,'ton')">Fun</button>
+    </div>
+  </div>
+
+  <button class="generate" onclick="generer()">Générer le prompt</button>
+
+  <textarea id="resultat"></textarea>
+
+  <button class="copy" onclick="copier()">📋 Copier le prompt</button>
+
 </main>
 
 <footer>
   <h3>Partenaires</h3>
-  <div class="logos"></div>
+  <div class="logos">
+    <img src="ue.png">
+    <img src="acsrv.png">
+  </div>
 </footer>
 
 <script src="script.js"></script>
