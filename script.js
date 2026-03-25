@@ -1,18 +1,31 @@
-function generer() {
-  const role = document.getElementById('role').value;
-  const objectif = document.getElementById('objectif').value;
-  const contexte = document.getElementById('contexte').value;
-  const contraintes = document.getElementById('contraintes').value;
-  const ton = document.getElementById('ton').value;
+let selections={role:'',ton:''};
 
-  let prompt = `Tu es ${role}.`;
+function select(btn,type){
+document.querySelectorAll(`#${type} button`).forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+selections[type]=btn.innerText;
+}
 
-  if (objectif) prompt += ` Ta mission est de ${objectif}.`;
-  if (contexte) prompt += ` Le contexte est le suivant : ${contexte}.`;
-  if (contraintes) prompt += ` Tu dois respecter : ${contraintes}.`;
-  if (ton) prompt += ` Adopte un ton ${ton}.`;
+function generer(){
+let prompt=`Tu es ${selections.role||"un expert"}.`;
 
-  prompt += " Fournis une réponse claire, structurée et directement exploitable.";
+let objectif=document.getElementById('objectif').value;
+let contexte=document.getElementById('contexte').value;
+let contraintes=document.getElementById('contraintes').value;
 
-  document.getElementById('resultat').value = prompt;
+if(objectif)prompt+=` Ta mission est de ${objectif}.`;
+if(contexte)prompt+=` Le contexte est le suivant : ${contexte}.`;
+if(contraintes)prompt+=` Tu dois respecter : ${contraintes}.`;
+if(selections.ton)prompt+=` Adopte un ton ${selections.ton}.`;
+
+prompt+=" Fournis une réponse claire et exploitable.";
+
+document.getElementById('resultat').value=prompt;
+}
+
+function copier(){
+let txt=document.getElementById('resultat');
+txt.select();
+document.execCommand('copy');
+alert('Prompt copié !');
 }
