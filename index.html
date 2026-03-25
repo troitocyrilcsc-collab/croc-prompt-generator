@@ -28,18 +28,66 @@
   </div>
 
   <!-- ROLE -->
-  <div class="section">
-    <h3>Rôle</h3>
-    <div class="choices" id="role">
-      <button onclick="select(this,'role')">Animateur socioculturel</button>
-      <button onclick="select(this,'role')">Coordinateur jeunesse</button>
-      <button onclick="select(this,'role')">Médiateur numérique</button>
-      <button onclick="select(this,'role')">Travailleur social</button>
-      <button onclick="select(this,'role')">Responsable centre social</button>
-      <button onclick="select(this,'role')">Animateur senior</button>
-      <button onclick="select(this,'role')">Chargé de projet social</button>
-    </div>
-  </div>
+<div class="section">
+  <h3>Rôle</h3>
+
+  <select id="role">
+    <option value="">-- Sélectionner un rôle --</option>
+
+    <optgroup label="Encadrement et Direction">
+      <option>Directeur Général</option>
+      <option>Directeur Général Adjoint</option>
+      <option>Directeur de Pôle</option>
+      <option>Directeur d’Équipement</option>
+      <option>Directeur Adjoint d’Équipement</option>
+      <option>Directeur Administratif et Financier</option>
+      <option>Coordinateur Pédagogique</option>
+      <option>Coordinateur Technique</option>
+      <option>Responsable EAJE</option>
+      <option>Coordinateur Centres Sociaux Connectés</option>
+      <option>Animateur de Pôle</option>
+    </optgroup>
+
+    <optgroup label="Administratif, Gestion & Support">
+      <option>Secrétaire Accueil</option>
+      <option>Assistant RH</option>
+      <option>Assistant de Gestion</option>
+      <option>Assistant Administratif</option>
+      <option>Comptable</option>
+      <option>Gestionnaire Paie</option>
+      <option>Agent d’Entretien</option>
+    </optgroup>
+
+    <optgroup label="Secteur social & animation">
+      <option>Responsable secteur adulte et famille</option>
+      <option>Responsable secteur jeunesse</option>
+      <option>Responsable secteur enfance</option>
+      <option>Animateur</option>
+      <option>Animateur ACM</option>
+      <option>Animateur loisirs</option>
+      <option>Médiateur familial</option>
+      <option>Chargé d’insertion</option>
+      <option>Formateur</option>
+      <option>Médiateur</option>
+    </optgroup>
+
+    <optgroup label="Petite enfance">
+      <option>Auxiliaire de puériculture</option>
+      <option>Éducateur de jeunes enfants</option>
+    </optgroup>
+
+    <optgroup label="Communication">
+      <option>Responsable communication</option>
+      <option>Chargé de communication</option>
+    </optgroup>
+
+    <optgroup label="Numérique & Informatique">
+      <option>Technicien informatique</option>
+      <option>Chargé de transition en Territoir</option>
+    </optgroup>
+
+  </select>
+</div>
 
   <!-- CADRAGE -->
   <div class="section">
